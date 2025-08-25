@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* html{
+    background: black;   try this out ;)
+    filter: invert(1);
+} */
+
+@media (min-width: 900px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  color: black;
+}
+
+header {
+  background: white;
+  box-shadow: 0 0 4px 2px #ddd;
+  width: 100%;
+  position: fixed;
+}
+
+.clear {
+  height: 112px;
+}
+
+header nav {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  /*justify-content: space-between; */
+  padding: 0 2%;
+  border-bottom: 1px solid #ddd;
+}
+
+header img {
+  height: 34px;
+}
+
+h2::selection {
+  background: rgb(45, 209, 195);
+  color: white;
+}
+
+h1::selection {
+  background: yellow;
+}
+
+p::selection {
+  background: rgba(0, 255, 170, 0.623);
+  color: crimson;
+}
+
+.btn {
+  color: white;
+  background: #1a73e8;
+  padding: 0 24px;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 4px;
+  letter-spacing: 0.75px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  color: white;
+  background: #174ea6;
+}
+
+.gmail-logo-text {
+  font-size: 24px;
+  color: #666;
+  margin-left: 8px;
+}
+
+/*  footer > *{
+    margin:32px 16px;
+} */
+
+footer {
+  margin: 32px 16px;
+  background-color: #f8f8f8;
+}
+
+footer img {
+  height: 30px;
+  filter: brightness(0.5); /* for getting bright (Google) */
+}
+
+footer nav {
+  margin: 32px 0px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+}
+
+footer li {
+  margin-right: 16px;
+}
+
+footer select {
+  margin-left: 16px;
+  border: none;
+  background-color: #f8f8f8;
+  padding: 8px;
+  width: 260px;
+}
+
+.help-icon {
+  color: white;
+  font-weight: 600;
+  background: black;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 99px;
+  margin-right: 8px;
+}
+
+/* select code and use Ctrl + k and Ctrl + C for comments */
+
+/* Sections */
+
+section {
+  padding: 40px 24px;
+  /* text-align: center;  For keeping images to center  */
+  /* or */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2 {
+  font-size: 32px;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  margin: 24px 0;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+p {
+  margin: 12px;
+  text-align: center;
+}
+
+.hero-section,
+.stay-organised-section,
+.never-drop-ball-section,
+.avoid-suspicious-emails-section {
+  background: #f8f8f8;
+}
+
+.get-gmail-section > * + * {
+  margin-bottom: 28px 0;
+}
+
+.get-gmail-section img {
+  height: 73px;
+}
+
+.get-gmail-section .btn {
+  line-height: 49px;
+}
+
+.experience-gmail-section img {
+  height: 48px;
+  margin-top: 20px;
+}
+
+.m4 {
+  margin: 20px 40px;
+}
+
+.device-section img {
+  width: 100%;
+}
