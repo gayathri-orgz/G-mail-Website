@@ -1,4 +1,3 @@
-```markdown
 # 🚀 Deploying a Static Website on AWS using EC2, ECR & ALB
 
 ## 📌 Project Overview
@@ -16,8 +15,6 @@ This project highlights my skills in **AWS Cloud, Docker, Networking, and Load B
 ---
 
 ## 🏗️ Architecture
-
-```
 
 ```
          +-------------+
@@ -42,8 +39,6 @@ This project highlights my skills in **AWS Cloud, Docker, Networking, and Load B
      +--------------------------+
 ```
 
-````
-
 ---
 
 ## ⚙️ Steps to Reproduce
@@ -63,8 +58,6 @@ docker tag gmail-website:latest <account_id>.dkr.ecr.us-east-1.amazonaws.com/gma
 docker push <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-website:latest
 ````
 
----
-
 ### 2️⃣ Launch EC2 Instance & Install Docker
 
 ```bash
@@ -78,8 +71,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
----
-
 ### 3️⃣ Run Website Container on EC2
 
 ```bash
@@ -90,8 +81,6 @@ docker pull <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-website:latest
 docker run -d -p 8080:80 <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-website:latest
 ```
 
----
-
 ### 4️⃣ Configure Application Load Balancer (ALB)
 
 * Create an **Application Load Balancer** (Internet-facing).
@@ -99,14 +88,11 @@ docker run -d -p 8080:80 <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-webs
 * Add a **Listener** on port **80 (HTTP)** → Forward to target group.
 * Register your EC2 instance in the target group.
 
----
-
 ### 5️⃣ Configure Security Groups
 
 * **ALB Security Group**: Allow **HTTP (80)** from `0.0.0.0/0`.
 * **EC2 Security Group**: Allow **TCP (8080)** *only from ALB security group*.
 
----
 
 ### 6️⃣ Test the Setup
 
@@ -117,16 +103,12 @@ docker run -d -p 8080:80 <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-webs
   ```
 * Open it in a browser → You should see the static website! 🎉
 
----
-
 ## ✅ Results
 
 * Website hosted successfully in a **Docker container on EC2**.
 * Traffic distributed via **Application Load Balancer**.
 * Used **ECR as a private container registry**.
 * Ensured **secure communication** using SG rules.
-
----
 
 ## 🛠️ Tech Stack
 
@@ -136,16 +118,9 @@ docker run -d -p 8080:80 <account_id>.dkr.ecr.us-east-1.amazonaws.com/gmail-webs
 * **AWS ALB** → Distribute incoming traffic across instances.
 * **Security Groups** → Control inbound/outbound traffic.
 
----
-
 ## 📚 Learnings
 
 * Hands-on with **containerization & cloud deployment**.
 * Practical understanding of **load balancing, target groups, and SGs**.
 * Experience in **pushing/pulling Docker images to ECR**.
 * Deployed a **scalable & secure static website** on AWS.
-
----
-
-```
-
